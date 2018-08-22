@@ -9,7 +9,7 @@ require './Player.rb'
     @number2 = Random.rand(1..50)
     @answer = @number1 + @number2
 
-    puts "#{player.name}'s turn, What is #{@number1} + #{@number2}?"
+    puts "#{player.name}'s turn: What is #{@number1} + #{@number2}?"
     @input = gets.chomp
 
   end
@@ -17,9 +17,9 @@ require './Player.rb'
   def check_answer
 
     if @input === @answer
-      puts 'Ding!'
+      puts 'YES! You are correct'
     else
-      puts 'Nope!'
+      puts 'Seriously? No!'
       @current_player.wrongAnswer
 
     end
